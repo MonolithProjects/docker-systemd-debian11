@@ -1,6 +1,6 @@
 # Debian 11 Ansible Test Image
 
-[![GitHub Actions](https://github.com/MonolithProjects/docker-systemd-debian11/workflows/Dockerfile%20test/badge.svg?branch=master)](https://github.com/MonolithProjects/docker-systemd-debian11/actions)
+[![GitHub Actions](https://github.com/MonolithProjects/docker-systemd-debian11/workflows/Dockerfile%20test/badge.svg?branch=main)](https://github.com/MonolithProjects/docker-systemd-debian11/actions)
 [![DockerHub-layers](https://img.shields.io/microbadger/layers/monolithprojects/systemd-debian11)](https://hub.docker.com/repository/docker/monolithprojects/systemd-debian11)
 [![DockerHub-pulls](https://img.shields.io/docker/pulls/monolithprojects/systemd-debian11)](https://hub.docker.com/repository/docker/monolithprojects/systemd-debian11)
 [![DockerHub](https://img.shields.io/docker/cloud/automated/monolithprojects/systemd-debian11?maxAge=2592000)](https://hub.docker.com/repository/docker/monolithprojects/systemd-debian11)
