@@ -12,8 +12,8 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         apt-utils \
         locales \
-        python-setuptools \
-        python-pip \
+        python3-setuptools \
+        python3-pip \
         software-properties-common \
         rsyslog systemd systemd-cron sudo iproute2 \
     && rm -Rf /var/lib/apt/lists/* \
