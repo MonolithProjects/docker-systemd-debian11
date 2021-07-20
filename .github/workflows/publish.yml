@@ -1,0 +1,24 @@
+name: Publish Image
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v2
+          - name: Publish
+            uses: HurricanKai/Publish-Docker-Github-Action@master
+            if: contains(github.ref, 'refs/tags/')
+            with:
+              name: monolithprojects/systemd-debian11
+              username: monolithprojects
+              password: ${{ secrets.TOKEN }}
+              tagging: true
+              registry: docker.io
+              dockerfile: Dockerfile

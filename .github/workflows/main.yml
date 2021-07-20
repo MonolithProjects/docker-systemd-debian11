@@ -1,0 +1,22 @@
+name: Dockerfile test
+
+on:
+    push:
+        branches:
+            - main
+            - develop
+            - feature/*
+    schedule:
+        - cron: '0 4 * * 0'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: contains(github.ref, 'main') || contains(github.ref, 'develop') || contains(github.ref, 'feature/')
+        steps:
+          - name: checkout
+            uses: actions/checkout@v2
+          - name: hadolint
+            uses: brpaz/hadolint-action@master
+          - name: build
+            run: docker build --no-cache .
